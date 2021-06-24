@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "serve": "nodemon app.js",
+    "serve:prod": "nodemon app.js",
     "db:seed": "node db/seeds.js"
   },
   "keywords": [],

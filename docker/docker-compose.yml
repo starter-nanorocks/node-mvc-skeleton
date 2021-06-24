@@ -1,0 +1,25 @@
+version: '3'
+services:
+  node:
+    restart: "always"
+    build: "./"
+    ports:
+      - "5000:5000"
+    volumes:
+      - "./../app:/usr/src/app"
+    links:
+        - "mongo"  
+  mongo:
+    image: "mongo"
+    ports:
+      - "27017:27017"
+    volumes:
+      - "mongodb:/data/db"
+      - "./../beckup:/dump"
+volumes:
+ mongodb:
+  
+#  docker-compose -f docker/docker-compose.yml up -d --build
+#  docker-compose -f docker/docker-compose.yml down
+#  docker-compose -f docker/docker-compose.yml logs
+#  docker exec -it <node_container_id> sh

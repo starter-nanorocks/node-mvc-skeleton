@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 mongoose
-  .connect("mongodb://localhost:27017/test_db_nano", {
+  .connect("mongodb://mongo:27017/test_db_nano", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,

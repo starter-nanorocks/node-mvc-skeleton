@@ -5,6 +5,7 @@ exports.getComments = async (req, res) => {
         const comments = await Comment.find();
         // res.json(comments)
         // console.log(typeof comments);
+        
         res.render('home', {
             comments:comments,
             title: "Home page"
